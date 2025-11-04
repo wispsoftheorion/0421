@@ -343,3 +343,7 @@ body {
     transform: none;
   }
 }
+
+* {
+  font-family: 'ROMANTIC', serif !important;
+}
