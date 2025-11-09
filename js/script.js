@@ -68,31 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // === TURNTABLE & SPOTIFY SYNC ===
-  const turntable = document.querySelector(".turntable");
-  const spotify = document.querySelector(".spotify-embed");
-
-  if (spotify && turntable) {
-    spotify.addEventListener("click", () => {
-      const isPlaying = turntable.classList.toggle("playing");
-
-      if (isPlaying) {
-        // Animate record and hand
-        turntable.classList.add("spin");
-
-        // Start stars animation
-        document.body.classList.add("playing");
-      } else {
-        turntable.classList.remove("spin");
-        document.body.classList.remove("playing");
-      }
-    });
-  }
-
   // === STARS ===
   const starContainer = document.getElementById("star-container");
   if (starContainer) {
-    const numStars = 80; // you can increase this for more stars
+    const numStars = 80;
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
@@ -102,4 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
       starContainer.appendChild(star);
     }
   }
+
+  // === AUTO ANIMATE TURNTABLE & STARS ===
+  const turntable = document.querySelector(".turntable");
+  const body = document.body;
+
+  setTimeout(() => {
+    body.classList.add("playing");
+    if (turntable) {
+      turntable.classList.add("playing");
+      turntable.classList.add("spin");
+    }
+  }, 1000); // wait 1s before starting animation
 });
