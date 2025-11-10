@@ -1,4 +1,6 @@
-/* LINKS */
+/* 🌸 RESET + LINKS */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -8,7 +10,7 @@ a:hover {
   opacity: 0.8;
 }
 
-/* FONTS */
+/* ✨ FONTS */
 @font-face {
   font-family: 'ROMANTIC';
   src: url('ROMANTIC.woff2') format('woff2');
@@ -19,7 +21,7 @@ a:hover {
   font-style: italic;
 }
 
-/* ROOT COLORS */
+/* 🎨 ROOT COLORS */
 :root {
   --paper: #ebd7bf;
   --accent: #7b5a36;
@@ -29,58 +31,69 @@ a:hover {
   --shadow: rgba(45, 33, 25, 0.12);
 }
 
-body.subs {
-  --paper: #f8e3e3;
-  --accent: #b35c5c;
-  --accent-2: #d67a7a;
-  --text: #472a2a;
+/* 🌠 HOME PAGE (rotating stars background) */
+body.home-page {
+  position: relative;
+  overflow: hidden;
+  color: var(--text);
+  font-family: 'Lora', serif;
 }
 
-body.photos {
-  --paper: #eaf0e2;
-  --accent: #5a7b36;
-  --accent-2: #82a652;
-  --text: #2f3b2a;
+body.home-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rotateStars 90s linear infinite;
+  z-index: -2;
+  opacity: 0.9;
 }
 
-body.letter {
-  --paper: #fff1d6;
-  --accent: #a67036;
-  --accent-2: #c08e52;
-  --text: #3b2f1a;
+body.home-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
-body.tunes {
-  --paper: #e3d3eb;
-  --accent: #654d7a;
-  --accent-2: #8b6fa3;
-  --text: #3c2e4a;
+@keyframes rotateStars {
+  from { transform: rotate(0deg) scale(1); }
+  to { transform: rotate(180deg) scale(1.05); }
 }
 
+/* 🌈 OTHER PAGE THEMES */
+body.subs-page {
+  background-color: #f3e1c9;
+}
+
+body.photos-page {
+  background-color: #fbe7e0;
+}
+
+body.letter-page {
+  background-color: #e8e0d2;
+}
+
+body.tunes-page {
+  background-color: #e4d8c4;
+}
+
+/* 🪞 GLOBAL */
 body {
   background-color: var(--paper);
   color: var(--text);
   font-family: 'Lora', serif;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  overflow-x: hidden;
 }
 
 h1, h2 {
   color: var(--accent);
-}
-
-a {
-  color: var(--accent-2);
-}
-
-
-/* GLOBAL */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Lora', serif;
-  color: var(--text);
-  background-color: var(--paper);
-  line-height: 1.8;
-  letter-spacing: 1px;
-  overflow-x: hidden;
 }
 
 .title, .section-title, .nav .brand, .letter-title, .bubble h3 {
@@ -88,14 +101,38 @@ body {
   letter-spacing: 4px;
 }
 
+/* 🌼 MAIN LAYOUT */
+.container {
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.narrow { max-width: 720px; margin: 0 auto; }
+
+/* 🩷 CENTERED TEXT */
 .main-text {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center; /* centers horizontally */
-  text-align: center; /* centers the text itself */
-  min-height: 100vh; /* fills the screen height */
-  padding: 0 20px; /* keeps it comfy on mobile */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+/* ✨ NAVIGATION (stickers) */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+}
+.nav .brand {
+  color: var(--accent);
+  font-size: 28px;
 }
 
 .nav-stickers {
@@ -110,7 +147,7 @@ body {
 }
 
 .nav-stickers img {
-  width: 40px; /* adjust size if too big or small */
+  width: 50px;
   height: auto;
   transition: transform 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
@@ -121,43 +158,7 @@ body {
   opacity: 0.9;
 }
 
-/* CONTAINERS */
-.container {
-  max-width: 980px;
-  margin: 36px auto;
-  padding: 24px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.narrow { max-width: 720px; margin: 0 auto; }
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
-}
-.nav .brand {
-  color: var(--accent);
-  font-size: 28px;
-}
-
-/* FOOTER */
-.footer {
-  margin-top: auto;
-  text-align: center;
-  padding: 1rem 0;
-  font-style: italic;
-  color: #593c22;
-  font-size: 0.9rem;
-}
-
-/* MUSIC AREA ALWAYS SHOWN */
-.music-flap button.flap-toggle { display: none; }
-.music-area { display: block !important; opacity: 1; transform: none; }
-
-/* === TURNTABLE === */
+/* 🎵 TURNTABLE SECTION */
 .turntable {
   position: relative;
   display: flex;
@@ -242,12 +243,9 @@ body {
   left: 0;
 }
 
-/* The one-time move toward vinyl */
-.hand.move {
-  transform: rotate(25deg);
-}
+/* VINYL MOTION */
+.hand.move { transform: rotate(25deg); }
 
-/* SPINNING RECORD */
 .turntable.spin .record {
   animation: spinRecord 5s linear infinite;
 }
@@ -270,13 +268,14 @@ body {
 .sparkle2 { top: 10px; right: -20px; animation-delay: 1s; }
 .sparkle3 { bottom: 30px; left: -10px; animation-delay: 1.8s; }
 .sparkle4 { bottom: -20px; right: 30px; animation-delay: 2.5s; }
+
 @keyframes twinkle {
   0%, 100% { opacity: 0; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 .turntable.spin .sparkle { opacity: 1; }
 
-/* 🌟 STAR FIELD 🌟 */
+/* ⭐ STAR FIELD EFFECT */
 #star-container {
   position: fixed;
   top: 0; left: 0;
@@ -310,38 +309,30 @@ body.playing .star {
   filter: drop-shadow(0 0 6px white);
 }
 
-/* RESPONSIVE */
+/* 💌 FOOTER */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0;
+  font-style: italic;
+  color: #593c22;
+  font-size: 0.9rem;
+}
+
+/* 📱 RESPONSIVE (mobile) */
 @media (max-width: 600px) {
   .record { width: 150px; height: 150px; margin-right: 20px; }
   .hand { width: 90px; right: 20px; top: 30px; }
   .plinth { width: 180px; height: 30px; bottom: -20px; }
 }
 
-.turntable.spin .record {
-  animation: spinRecord 5s linear infinite;
-}
-
-@keyframes spinRecord {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Default size for desktop/tablet */
-.nav-stickers img {
-  width: 50px; /* you can change this to 40px or 60px */
-  height: auto;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-/* Mobile adjustments */
 @media (max-width: 550px) {
   .nav-stickers {
     top: 10px;
     right: 10px;
-    gap: 10px; /* space between stickers */
+    gap: 10px;
   }
-
   .nav-stickers img {
-    width: 35px; /* smaller size for mobile */
+    width: 35px;
   }
 }
