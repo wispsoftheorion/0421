@@ -62,25 +62,19 @@ img {
   height: auto;
 }
 
-.container {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-    
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
+@media (min-width: 700px) {
+  .pinterest-gallery {
+    column-count: 3;
+  }
 }
 
-.masonry {
-  display: inline-block;
-  width: 100%;
+@media (min-width: 1000px) {
+  .pinterest-gallery {
+    column-count: 4;
+  }
 }
 
-.masonry img {
-  display:block;
-  width: 100%;
-}
+
 body.letter-page {
   background-color: #e8e0d2;
 }
