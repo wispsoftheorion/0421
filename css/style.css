@@ -132,7 +132,9 @@ h1, h2 {
   cursor: pointer;
 }
 
-.preview {
+.preview-cards img {
+  width: 30px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
