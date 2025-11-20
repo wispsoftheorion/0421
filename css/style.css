@@ -155,7 +155,7 @@ h1, h2 {
 }
 
 .preview-cards {
-  width: 40px;
+  width: 80px;
   height: auto;
   display: flex;
   align-items: center;
