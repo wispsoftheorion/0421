@@ -60,6 +60,10 @@ body.subs-page {
 body.photos-page {
   background-color: #fbe7e0;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 
 body.letter-page {
   background-color: #e8e0d2;
