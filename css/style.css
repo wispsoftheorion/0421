@@ -62,6 +62,19 @@ img {
   height: auto;
 }
 
+.masonry-container {
+ column-count: 3;
+ column-gap: 15px;
+}
+.masonry-item {
+ display: inline-block;
+ width: 100%;
+}
+.masonry-item img {
+ display:block;
+ width: 100%;
+}
+
 body.letter-page {
   background-color: #e8e0d2;
 }
@@ -86,7 +99,7 @@ h1, h2 {
 
 .title, .section-title, .nav .brand, .letter-title, .bubble h3 {
   font-family: 'ROMANTIC', cursive;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 /* 🌼 MAIN LAYOUT */
