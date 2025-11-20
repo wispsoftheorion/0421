@@ -30,6 +30,10 @@ a:hover {
 }
 
 body.home-page {
+  background-color: #f3e1c9;
+}
+
+body.subs-page {
   background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
   background-size: cover;
   background-position: center;
@@ -40,11 +44,7 @@ body.home-page {
   font-family: 'Lora', serif;
   overflow: scroll;
 }
-
-body.subs-page {
-  background-color: #f3e1c9;
-}
-
+  
 body.photos-page {
   background-image: url('../images/1000025156.jpg');
   background-size: cover;
