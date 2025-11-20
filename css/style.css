@@ -63,13 +63,13 @@ img {
 }
 
 @media (min-width: 700px) {
-  .pinterest-gallery {
+  .masonry {
     column-count: 3;
   }
 }
 
 @media (min-width: 1000px) {
-  .pinterest-gallery {
+  .masonry {
     column-count: 4;
   }
 }
