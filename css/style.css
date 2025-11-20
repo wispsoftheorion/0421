@@ -40,18 +40,8 @@ body.home-page {
   position: relative;
   color: var(--text);
   font-family: 'Lora', serif;
-  overflow: hidden;
+  overflow: scroll;
 }
-
-/* Optional: soft overlay for readability */
-body.home-page::before {
-  content: "";
-  position: static;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: -1;
-}
-
 
 body.subs-page {
   background-color: #f3e1c9;
