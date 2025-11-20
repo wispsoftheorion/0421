@@ -62,16 +62,16 @@ img {
   height: auto;
 }
 
-@media (min-width: 700px) {
-  .masonry {
-    column-count: 3;
-  }
+.masonry img {
+column-count: 2; /* number of vertical columns */
+  column-gap: 12px;
 }
 
-@media (min-width: 1000px) {
-  .masonry {
-    column-count: 4;
-  }
+.masonry img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 10px; /* optional cute edges */
+  display: block;
 }
 
 
