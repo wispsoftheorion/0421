@@ -1,1 +1,45 @@
-wala pa witz
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>?</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="hid-page">
+
+  <header class="nav small">
+    <a class="brand" href="index.html"> ← return ☘︎</a>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">enter the passcode!</h1>
+
+    <div class="box">
+      <h2>[hint] Hugo Perez |</h2>
+      <input type="password" id="pw">
+      <button onclick="check()">you sure?</button>
+      <p id="error" style="color:red; display:none; margin-top:10px;">oops, sorry:(</p>
+    </div>
+  </main>
+
+  <script>
+    function check() {
+      let password = document.getElementById("pw").value;
+
+      if (password === "042125") {
+        window.location.href = "priv.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
