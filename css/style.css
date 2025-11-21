@@ -30,16 +30,28 @@ a:hover {
 }
 
 body.home-page {
-  background-image: url('../images/main1z.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
   color: var(--text);
   font-family: 'Lora', serif;
   overflow: scroll;
 }
+
+body.home-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/main1j.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  z-index: -1;
+}
+
 
 body.subs-page {
   background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
@@ -232,7 +244,7 @@ h1, h2 {
   right: 0;
   width: 280px;
   height: 280px;
-  background: #2a0d0d;
+  background: #661C0B;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.35);
   z-index: 0;
@@ -265,7 +277,7 @@ h1, h2 {
 .hand {
   position: absolute;
   width: 120px;
-  height: 7px;
+  height: 9px;
   background: #cdbba0;
   border-radius: 8px;
   top: 50px;
@@ -323,8 +335,8 @@ h1, h2 {
 
 @media (max-width: 600px) {
   .record { width: 150px; height: 150px; margin-right: 20px; }
-  .hand { width: 90px; right: 30px; top: 40px; }
-  .plinth { width: 220px; height:220px; }
+  .hand { width: 90px; right: 10px; top: 40px; }
+  .plinth { width: 180px; height:180px; }
 }
 
 @media (max-width: 550px) {
