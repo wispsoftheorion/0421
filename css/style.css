@@ -47,7 +47,7 @@ body.home-page::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
   transform-origin: center;
   z-index: -1;
 }
@@ -318,7 +318,7 @@ h1, h2 {
   .plinth {
     width: 250px;
     height: 250px;
-    bottom: -25px;
+    bottom: -20px;
     right: 10px;
   }
 }
@@ -336,7 +336,7 @@ h1, h2 {
 @media (max-width: 600px) {
   .record { width: 150px; height: 150px; margin-right: 20px; }
   .hand { width: 90px; right: 10px; top: 40px; }
-  .plinth { width: 180px; height:180px; }
+  .plinth { width: 175px; height:180px; }
 }
 
 @media (max-width: 550px) {
