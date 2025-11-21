@@ -64,6 +64,48 @@ body.subs-page {
   font-family: 'Lora', serif;
   overflow: scroll;
 }
+
+body.hid-page {
+  background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  color: var(--text);
+  font-family: 'Lora', serif;
+  overflow: scroll;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+  margin: 40px auto;
+}
+
+.box input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
   
 body.photos-page {
   background-image: url('../images/1000025156.jpg');
