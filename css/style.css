@@ -273,12 +273,10 @@ h1, h2 {
 .letter-body {
     max-width: 700px;
     margin: 40px auto;
-    padding: 40px 50px;
-    border: 2px solid #d2b48c;
-    border-radius: 8px;
-    background: url('your-paper-texture.png');
-    background-size: cover;
-    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    padding: 35px;
+    background: #fffdf7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
 }
 
 .turntable {
