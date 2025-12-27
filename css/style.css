@@ -208,8 +208,8 @@ h1, h2 {
   letter-spacing: 3px;
 }
 
-.letter-title {
-  font-size: 12px;
+.letter-title, priv-title {
+  font-size: 17px;
 }
 
 .container {
