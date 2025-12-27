@@ -31,26 +31,23 @@ a:hover {
 
 body.home-page {
   position: relative;
-  color: var(--text);
-  font-family: 'Lora', serif;
-  overflow: scroll;
-}
-
-body.home-page::before { 
-  content: ""; 
-  position: relative; 
-  top: 0; 
-  left: 0; 
-  width: 100vw; 
-  height: 100vh; 
-  background-image: url('../images/main1j.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  transform: rotate(-180deg); 
-  transform-origin: center; 
   z-index: 0;
 }
+
+body.home-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/main1j.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+  transform-origin: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
 
 body.subs-page {
   background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
