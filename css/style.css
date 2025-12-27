@@ -65,7 +65,7 @@ body.subs-page {
 }
 
 body.hid-page {
-  background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
+  background-image: url('../images/eso.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,11 +77,12 @@ body.hid-page {
 }
 
 .box {
-  background: white;
+  background: #D5B893;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
+  font-size: 0.9rem;
   width: 300px;
   margin: 40px auto;
 }
@@ -100,8 +101,8 @@ body.hid-page {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  background: black;
-  color: white;
+  background: #3B270C;
+  color: #593c22;
   cursor: pointer;
 }
 
