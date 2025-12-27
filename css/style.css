@@ -160,7 +160,7 @@ body.letter-page {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  color: #4A231E;
+  color: 856E41;
   font-family: 'Lora', serif;
   overflow: scroll;
 }
@@ -194,6 +194,9 @@ h1, h2 {
   font-family: 'ROMANTIC', cursive;
   letter-spacing: 3px;
 }
+
+.letter-title {
+  font-size: 12px
 
 .container {
   max-width: 980px;
