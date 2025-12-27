@@ -165,6 +165,19 @@ body.letter-page {
   overflow: scroll;
 }
 
+body.priv-page {
+  background-image: url('../images/images/8a139acfee5bdc024325b7f531e277e6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  color: var(--text);
+  font-family: 'Lora', serif;
+  overflow: scroll;
+}
+
+
 body.tunes-page {
   background-image: url('../images/tunebg.jpg');
   background-size: cover;
