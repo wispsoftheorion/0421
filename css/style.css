@@ -36,21 +36,20 @@ body.home-page {
   overflow: scroll;
 }
 
-body.home-page::before {
-  content: "";
-  position: fixed;
-  inset: -50%; /* prevents empty corners after rotation */
-  background-image: url('../images/eso.jpg');
-  background-size: auto 100%;
-  background-repeat: repeat-x;
-  background-position: 0 center;
-  transform: rotate(-180deg);
-  transform-origin: center;
+body.home-page::before { 
+  content: ""; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh; 
+  background-image: url('../images/eso.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  transform: rotate(-180deg); 
+  transform-origin: center; 
   z-index: -1;
-}
-
-background-position: var(--bg-x) center;
-
 
 body.subs-page {
   background-image: url('../images/TychoSkymapII.t3_04096x02048.jpg');
